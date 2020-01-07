@@ -1,0 +1,18 @@
+.card-apartment {
+  overflow: hidden;
+  min-height: 260px;
+  width: 95%;
+  background: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  position: relative;
+  transition: 0.3s;
+
+  img {
+    width: 270px;
+    object-fit: cover;
+  }
+}

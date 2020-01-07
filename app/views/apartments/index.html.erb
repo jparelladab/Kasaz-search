@@ -4,16 +4,17 @@
   <h3>English</h3>
 </div>
 <div class="container-index">
-<%= render "apartments-filter" %>
+
+  <%= render "apartments-filter" %>
+
   <div class="apartments-container">
     <h1>Apartments</h1>
     <% @apartments.each do |apartment| %>
-      <div class="card-apartment">
-        <h2><%= apartment.title %></h2>
-      </div>
+      <%= render "apartment-card", apartment: apartment %>
     <% end %>
-
-
+  </div>
+  <div class="map">
+    <h1>Mapbox</h1>
   </div>
 
 </div>
