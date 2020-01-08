@@ -10,6 +10,7 @@
 
 .container-index {
   display: flex;
+  justify-content: space-evenly;
 
   #map {
     // height: 300px;
@@ -19,14 +20,43 @@
 }
 
 .filters-container {
+  background-color: #E4E6E1;
+  width: 300px;
+  h4 {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 1em;
+  }
   .prices-dropdowns {
     display: flex;
+    margin: 10px auto;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+    button {
+      width: 120px;
+      background-color: white;
+      color: black;
+    }
+
   }
   .sizes-dropdowns {
     display: flex;
+    margin: 10px auto;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+    button {
+      width: 120px;
+      background-color: white;
+      color: black;
+    }
   }
   .bedroom-filters {
     display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-left: 10px;
+    margin-bottom: 40px;
   }
 
 }
