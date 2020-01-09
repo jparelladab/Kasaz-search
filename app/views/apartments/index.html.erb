@@ -1,21 +1,16 @@
 <div class="navbar-index">
-  <%= image_tag("_logo.png", :alt => "Kasaz logo") %>
-  <h3>Log in</h3>
-  <h3>English</h3>
+  <i class="fas fa-bars"></i>
+  <%= image_tag("_logo.png", class: "navbar-image") %>
 </div>
-<div class="container-index">
-
-  <%= render "apartments-filter" %>
-
+<div class="search-bar-index">
+  <form class="example" action="#" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
   <div class="apartments-container">
-    <h1>Apartments</h1>
     <% @apartments.each do |apartment| %>
       <%= render "apartment-card", apartment: apartment %>
     <% end %>
   </div>
-  <div class="map">
-    <h1>Mapbox</h1>
-    <%= render "map" %>
-  </div>
 
-</div>

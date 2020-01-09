@@ -1,18 +1,26 @@
 .card-apartment {
   overflow: hidden;
   min-height: 260px;
-  width: 95%;
+  width: 1005;
   background: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  display: flex;
   border-radius: 3px;
   margin-bottom: 25px;
   margin-right: 20px;
-  position: relative;
-  transition: 0.3s;
 
   img {
     width: 270px;
     object-fit: cover;
   }
+  .card-infos {
+        padding: 20px;
+        a {
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+      }
+  .card-apartment:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
 }
