@@ -3,10 +3,11 @@
   <%= image_tag("_logo.png", class: "navbar-image") %>
 </div>
 <div class="search-bar-index">
-  <form class="example" action="#" style="margin:auto;max-width:300px">
+  <form class="example" action="#" style="">
   <input type="text" placeholder="Search.." name="search">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
+  <div class="filtros-button">Filtros</div>
 </div>
   <div class="apartments-container">
     <% @apartments.each do |apartment| %>
