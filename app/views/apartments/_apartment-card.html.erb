@@ -1,11 +1,18 @@
       <div class="card-apartment">
-        <%= image_tag("barcelona-apartment.jpg", :alt => "Kasaz logo") %>
+        <div class="card-image">
+          <%= image_tag("barcelona-apartment.jpg", :alt => "Kasaz logo") %>
         <!-- <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1346&q=80" alt="Spacious room in the city center"> -->
+          <div class="price-banner">
+            <p><%= number_with_delimiter(apartment.price, delimiter:  '.')+ "€" %></p>
+            <p><%= number_with_delimiter(apartment.price/apartment.sqm, delimiter: '.')+"€/m2" %></p>
+          </div>
+        </div>
         <div class="card-infos">
           <a href="#"><%= apartment.title %></a>
-          <p><%= number_with_delimiter(apartment.price, delimiter:  '.')+ "€" %></p>
-          <p><%= apartment.sqm %></p>
-          <p><%= apartment.number_of_bedrooms %></p>
-          <p><%= apartment.number_of_bathrooms %></p>
+          <div class="flex-infos">
+            <p><%= apartment.sqm %></p>
+            <p><%= apartment.number_of_bedrooms %></p>
+            <p><%= apartment.number_of_bathrooms %></p>
+          </div>
         </div>
       </div>
