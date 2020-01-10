@@ -1,18 +1,22 @@
-      <div class="card-apartment">
-        <div class="card-image">
-          <%= image_tag("barcelona-apartment.jpg", :alt => "Kasaz logo") %>
-        <!-- <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1346&q=80" alt="Spacious room in the city center"> -->
-          <div class="price-banner">
-            <p><%= number_with_delimiter(apartment.price, delimiter:  '.')+ "€" %></p>
-            <p><%= number_with_delimiter(apartment.price/apartment.sqm, delimiter: '.')+"€/m2" %></p>
-          </div>
-        </div>
-        <div class="card-infos">
-          <a href="#"><%= apartment.title %></a>
-          <div class="flex-infos">
-            <p><%= apartment.sqm %></p>
-            <p><%= apartment.number_of_bedrooms %></p>
-            <p><%= apartment.number_of_bathrooms %></p>
-          </div>
-        </div>
-      </div>
+<div class="card-apartment">
+  <div class="card-image">
+    <%= image_tag("barcelona-apartment.jpg", :alt => "Kasaz logo") %>
+  <!-- <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1346&q=80" alt="Spacious room in the city center"> -->
+    <div class="price-banner">
+      <h4><%= number_with_delimiter(apartment.price, delimiter:  '.')%> &euro;</h4>
+      <h5><%= number_with_delimiter(apartment.price/apartment.sqm, delimiter: '.')%> &euro;/m<sup>2</sup></h5>
+    </div>
+  </div>
+  <div class="card-infos">
+    <div class="info-title">
+      <a href="#"><%= apartment.title %></a>
+    </div>
+    <div class="flex-infos">
+      <div class="infos-element"><i class="fas fa-check-circle"></i> <%= apartment.sqm %> m<sup>2</sup></div>
+       <div>|</div>
+      <div class="infos-element"><i class="fas fa-bed"></i> <%= apartment.number_of_bedrooms %> habs.</div>
+        <div>|</div>
+      <div class="infos-element"><i class="fas fa-bath"></i> <%= apartment.number_of_bathrooms %> baños</div>
+    </div>
+  </div>
+</div>
