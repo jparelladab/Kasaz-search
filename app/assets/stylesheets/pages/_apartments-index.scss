@@ -1,4 +1,5 @@
 $green: #1DC168;
+$purple: #7225A1;
 
 .navbar-index {
   height: 8vh;
@@ -51,18 +52,18 @@ $green: #1DC168;
   }
 
 .filters-container {
-  width: 300px;
-  margin-top: 10px;
-  .filters-sticky {
-    background-color: #E4E6E1;
-    position: sticky;
-    top: 10px;
-    padding: 50px 10px;
-    height: 97vh;
-  }
+  width: 100vw;
+  padding: 10%;
+  // .filters-sticky {
+  //   background-color: #E4E6E1;
+  //   position: sticky;
+  //   top: 10px;
+  //   padding: 50px 10px;
+  //   height: 97vh;
+  // }
   h4 {
-
-    font-size: 1em;
+    text-align: center;
+    font-size: 1.3em;
   }
   .prices-dropdowns {
     display: flex;
@@ -73,6 +74,14 @@ $green: #1DC168;
       width: 120px;
       background-color: white;
       color: black;
+    }
+    button:hover {
+      background-color: $green;
+      color: white;
+    }
+    button:active {
+      background-color: $green;
+      color: white;
     }
 
   }
@@ -86,10 +95,18 @@ $green: #1DC168;
       background-color: white;
       color: black;
     }
+    button:hover {
+      background-color: $green;
+      color: white;
+    }
+    button:active {
+      background-color: $green;
+      color: white;
+    }
   }
   .bedroom-filters {
     display: flex;
-    width: 200px;
+
     justify-content: space-evenly;
     margin: auto;
     margin-left: 10px;
@@ -103,6 +120,35 @@ $green: #1DC168;
     margin: 10px auto;
     .card-apartment {
 }
+
+}
+
+.filters-popup {
+  display: none;
+
+  .rooms-button {
+    background-color: white;
+    color: black;
+  }
+
+  .rooms-button:hover {
+    background-color: $green;
+    color: white;
+
+  }
+  .rooms-button:active {
+    background-color: $green;
+    color: white;
+
+  }
+  .btn-ver-inmuebles {
+    background-color: $purple;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 40px;
+    padding: 10px;
+  }
 
 }
 
