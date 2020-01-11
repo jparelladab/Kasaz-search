@@ -1,0 +1,44 @@
+  <script>
+  $(document).ready(function(){
+    $(".filtros-button").click(function(){
+      $("#myForm").slideToggle();
+      $('#caret-toggle').toggleClass('fa-angle-up fa-angle-down');
+    });
+  });
+</script>
+
+
+<h1>Search Results</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+
+<% if @search.search_apartments.empty? %>
+  <p>No apartments found</p>
+<% else %>
+
+
+  <div class="navbar-index">
+    <i class="fas fa-bars"></i>
+    <%= image_tag("_logo.png", class: "navbar-image") %>
+  </div>
+
+  <div class="search-bar-index">
+
+    <form class="example" action="#" style="">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit" ><i class="fa fa-search" ></i></button>
+    </form>
+
+    <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
+  </div>
+
+    <div class="filters-popup" id="myForm">
+      <%= render "apartments-filter" %>
+    </div>
+
+    <div class="apartments-container">
+      <% @search.search_apartments.each do |apartment| %>
+        <%= render "apartment-card", apartment: apartment %>
+      <% end %>
+    </div>
+

@@ -1,6 +1,6 @@
 class ApartmentsController < ApplicationController
   def index
-    @apartments = Apartment.geocoded
+    @apartments = Apartment.search(params[:search])
     @markers = @apartments.map do |apartment|
       {
         lat: apartment.latitude,
@@ -9,7 +9,4 @@ class ApartmentsController < ApplicationController
     end
   end
 
-  def show
-    @apartment = Apartment.find(params[:id])
-  end
 end
