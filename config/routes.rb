@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get "apartments", to: "apartments#index"
   # get '/search_results', to: 'apartments#search_results'
-  resources :searches, only: [:new, :create, :show]
+  resources :searches, only: [:create, :show]
 end

@@ -55,13 +55,7 @@ $purple: #7225A1;
 .filters-container {
   width: 100vw;
   padding: 10%;
-  // .filters-sticky {
-  //   background-color: #E4E6E1;
-  //   position: sticky;
-  //   top: 10px;
-  //   padding: 50px 10px;
-  //   height: 97vh;
-  // }
+
   h4 {
     text-align: center;
     font-size: 1.3em;
@@ -106,15 +100,46 @@ $purple: #7225A1;
     }
   }
   .bedroom-filters {
-    display: flex;
+    // margin: 0 auto;
+    // margin-left: 10px;
+    // margin-bottom: 40px;
+    // border: 1px solid black;
+    // border-radius: 3px;
+    width: 330px;
+    box-sizing: border-box;
+.bedroom-filter-cell {
+    //   border: 1px solid black;
+    //   text-align: center;
+    //   display:inline-block;
+    // margin-right: -5px;
+    // padding-left: 0;
+    // text-align: center;
+    border: 1px solid #b9b9b9;
+    display: inline-block;
+    margin-right: -5px;
+    padding-left: 0;
+    text-align: center;
+    position: relative;
+    min-height: 1.5rem;
 
-    justify-content: space-evenly;
-    margin: auto;
-    margin-left: 10px;
-    margin-bottom: 40px;
+
+      .bedroom-filter-input {
+        // opacity: 0;
+        box-sizing: border-box;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+      }
+      .bedroom-filter-label {
+        cursor: pointer;
+    margin-bottom: 0;
+    padding: 10px;
+    width: 100%;
+    display: inline-block
+
+      }
+    }
   }
-
-}
 
 .apartments-container {
     // margin-top: 10px;
@@ -124,8 +149,6 @@ $purple: #7225A1;
 
 }
 
-.filters-popup {
-  display: none;
 
   .rooms-button {
     background-color: white;
@@ -151,8 +174,7 @@ $purple: #7225A1;
     padding: 10px;
   }
 
+
+
 }
-
-
-
 

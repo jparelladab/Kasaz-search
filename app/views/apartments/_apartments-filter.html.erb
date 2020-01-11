@@ -1,80 +1,123 @@
 <div class="filters-container">
-    <h4>Precio</h4>
-    <div class="prices-dropdowns">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Min
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">60.000 &euro;</a>
-          <a class="dropdown-item" href="#">70.000 &euro;</a>
-          <a class="dropdown-item" href="#">80.000 &euro;</a>
-          <a class="dropdown-item" href="#">90.000 &euro;</a>
-          <a class="dropdown-item" href="#">100.000 &euro;</a>
-          <a class="dropdown-item" href="#">110.000 &euro;</a>
-          <a class="dropdown-item" href="#">120.000 &euro;</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Max
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">60.000 &euro;</a>
-          <a class="dropdown-item" href="#">70.000 &euro;</a>
-          <a class="dropdown-item" href="#">80.000 &euro;</a>
-          <a class="dropdown-item" href="#">90.000 &euro;</a>
-          <a class="dropdown-item" href="#">100.000 &euro;</a>
-          <a class="dropdown-item" href="#">110.000 &euro;</a>
-          <a class="dropdown-item" href="#">120.000 &euro;</a>
-        </div>
-      </div>
+<%= simple_form_for @search do |s| %>
+  <h4>Precio</h4>
+  <div class="prices-dropdowns">
+    <div class="dropdown">
+      <%= s.input :min_price, collection: [60000, 70000, 80000, 90000] %>
+
+      <!-- <select name="min-price">
+        <option value="60000">60.000 &euro;</option>
+        <option value="70000">70.000 &euro;</option>
+        <option value="80000">80.000 &euro;</option>
+        <option value="90000">90.000 &euro;</option>
+        <option value="100000">100.000 &euro;</option>
+        <option value="110000">110.000 &euro;</option>
+        <option value="120000">120.000 &euro;</option>
+      </select> -->
+
     </div>
+    <div class="dropdown">
+      <%= s.input :max_price, collection: [60000, 70000, 80000, 90000] %>
+
+<!--       <select name="max-price">
+        <option value="60000">60.000 &euro;</option>
+        <option value="70000">70.000 &euro;</option>
+        <option value="80000">80.000 &euro;</option>
+        <option value="90000">90.000 &euro;</option>
+        <option value="100000">100.000 &euro;</option>
+        <option value="110000">110.000 &euro;</option>
+        <option value="120000">120.000 &euro;</option>
+      </select> -->
+
+    </div>
+  </div>
+
       <h4>Tamaño</h4>
     <div class="sizes-dropdowns">
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Min
-        </button>
+        <%= s.input :min_size, collection: [20, 30, 40, 50] %>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">40 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">60 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">80 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">100 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">120 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">140 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">160 m<sup>2</sup></a>
-        </div>
+<!--
+        <select name="min-size">
+          <option value="40">40 m<sup>2</sup></option>
+          <option value="60">60 m<sup>2</sup></option>
+          <option value="80">80 m<sup>2</sup>sup></option>
+          <option value="100">100 m<sup>2</sup></option>
+          <option value="120">120 m<sup>2</sup></option>
+          <option value="140">140 m<sup>2</sup></option>
+          <option value="160">160 m<sup>2</sup></option>
+        </select> -->
+
       </div>
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Max
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">40 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">60 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">80 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">100 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">120 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">140 m<sup>2</sup></a>
-          <a class="dropdown-item" href="#">160 m<sup>2</sup></a>
-        </div>
+        <%= s.input :max_size, collection: [20, 30, 40, 50] %>
+<!--         <select name="max-size">
+          <option value="40">40 m<sup>2</sup></option>
+          <option value="60">60 m<sup>2</sup></option>
+          <option value="80">80 m<sup>2</sup></option>
+          <option value="100">100 m<sup>2</sup></option>
+          <option value="120">120 m<sup>2</sup></option>
+          <option value="140">140 m<sup>2</sup></option>
+          <option value="160">160 m<sup>2</sup></option>
+        </select> -->
+
       </div>
     </div>
     <h4>Habitaciones</h4>
-    <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="btn-group col-sm-8" role="group" aria-label="Habitaciones">
-        <button type="button" class="btn btn-secondary rooms-button">Todos</button>
-        <button type="button" class="btn btn-secondary rooms-button">1+</button>
-        <button type="button" class="btn btn-secondary rooms-button">2+</button>
-        <button type="button" class="btn btn-secondary rooms-button">3+</button>
-        <button type="button" class="btn btn-secondary rooms-button">4+</button>
+      <%= s.input :num_rooms, collection: [1, 2, 3, 4] %>
+      <!-- <div class="bedroom-filters">
+        <div class="bedroom-filter-cell">
+          <input  id="hab_todos" name="num_rooms" type="radio" value="Todos" class="bedroom-filter-input">
+          <label for="todos" class="bedroom-filter-label">Todos</label>
+        </div>
+        <div class="bedroom-filter-cell">
+          <input id="hab_1" type="radio" name="num_rooms" value="1" class="bedroom-filter-input">
+          <label for="hab_1" class="bedroom-filter-label">1</label>
+        </div>
+        <div class="bedroom-filter-cell">
+          <input id="hab_2" type="radio" name="num_rooms" value="2" class="bedroom-filter-input">
+          <label for="hab_2" class="bedroom-filter-label">2</label>
+        </div>
+        <div class="bedroom-filter-cell">
+          <input id="hab_3" type="radio" name="num_rooms" value="3" class="bedroom-filter-input">
+          <label for="hab_3" class="bedroom-filter-label">3</label>
+        </div class="bedroom-filter-cell">
+        <div class="bedroom-filter-cell">
+          <input id="hab_4" type="radio" name="num_rooms" value="4" class="bedroom-filter-input">
+          <label for="hab_4" class="bedroom-filter-label">4</label>
+        </div>
       </div>
-      <div class="col-sm-2"></div>
-    </div>
-
-    <button class="btn-ver-inmuebles">Ver inmuebles</button>
-
+ -->
+ <%= s.button :submit, class: "btn-primary" %>
+ <% end %>
+<!--     <button class="btn-ver-inmuebles" type="submit">Ver inmuebles</button> -->
+<!-- </form> -->
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

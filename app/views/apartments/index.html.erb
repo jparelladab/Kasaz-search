@@ -14,15 +14,17 @@
 
 <div class="search-bar-index">
 
-  <form action="" style="">
-    <input type="text" placeholder="Search.." name="search">
+  <form action="#">
+    <input type="text" placeholder="Search..." name="search">
     <button type="submit" ><i class="fa fa-search" ></i></button>
   </form>
+
+
 
   <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
 </div>
 
-  <div class="filters-popup" id="myForm">
+  <div id="myForm">
     <%= render "apartments-filter" %>
   </div>
 

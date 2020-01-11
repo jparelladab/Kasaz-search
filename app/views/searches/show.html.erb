@@ -10,7 +10,6 @@
 
 <h1>Search Results</h1>
 
-<p><%= link_to 'Back', new_search_path %></p>
 
 <% if @search.search_apartments.empty? %>
   <p>No apartments found</p>
@@ -33,12 +32,13 @@
   </div>
 
     <div class="filters-popup" id="myForm">
-      <%= render "apartments-filter" %>
+      <%= render "apartments/apartments-filter" %>
     </div>
 
     <div class="apartments-container">
       <% @search.search_apartments.each do |apartment| %>
-        <%= render "apartment-card", apartment: apartment %>
+        <%= render "apartments/apartment-card", apartment: apartment %>
       <% end %>
     </div>
+    <% end %>
 
