@@ -4,6 +4,7 @@
       $("#myForm").slideToggle();
       $('#caret-toggle').toggleClass('fa-angle-up fa-angle-down');
     });
+    $('#hiddenText').val($('#search_keywords').val());
   });
 </script>
 
@@ -14,11 +15,10 @@
 
 <div class="search-bar-index">
 
-  <form action="#">
-    <input type="text" placeholder="Search..." name="search">
-    <button type="submit" ><i class="fa fa-search" ></i></button>
-  </form>
-
+<%= simple_form_for @new_search, html: {class: "form-inline"} do |s| %>
+  <%= s.input :keywords, label: false %>
+  <%= button_tag do %><i class='fa fa-search'></i><% end %>
+<% end %>
 
 
   <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>

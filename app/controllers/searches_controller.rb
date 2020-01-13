@@ -1,8 +1,4 @@
 class SearchesController < ApplicationController
-  # def new
-  #   @search = Search.new
-  # end
-
   def create
     @search = Search.create(search_params)
     redirect_to @search
@@ -10,6 +6,8 @@ class SearchesController < ApplicationController
 
   def show
     @search = Search.find(params[:id])
+    @new_search = Search.new
+    # @search.search_apartmentss(@search)
   end
 
   private
