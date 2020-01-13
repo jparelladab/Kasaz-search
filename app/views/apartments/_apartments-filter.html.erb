@@ -26,13 +26,17 @@
     </div>
 
     <h4>Habitaciones</h4>
-    <% if @search.nil? %>
-      <%= s.input :num_rooms, label: false, collection: {'Todos' => 0, "1+" => 1, "2+" => 2, "3+" => 3, "4+" => 4}, selected: 0 %>
-    <% else %>
-      <%= s.input :num_rooms, label: false, collection: {'Todos' => 0, "1+" => 1, "2+" => 2, "3+" => 3, "4+" => 4}, selected: @search.num_rooms %>
-    <% end %>
-    <%= s.button :submit, "Ver inmuebles", class: 'btn-ver-inmuebles' %>
+    <div class="bedroom-filters">
+      <% if @search.nil? %>
+        <%= s.input :num_rooms,label: "", html: {class: "align-dropdowns"}, label: false, collection: {'Todos' => 0, "1+" => 1, "2+" => 2, "3+" => 3, "4+" => 4}, selected: 0 %>
+      <% else %>
+        <%= s.input :num_rooms, label: "", html: {class: "align-dropdowns"},label: false, collection: {'Todos' => 0, "1+" => 1, "2+" => 2, "3+" => 3, "4+" => 4}, selected: @search.num_rooms %>
+      <% end %>
+    </div>
+      <%= s.button :submit, "Ver inmuebles", class: 'btn-ver-inmuebles' %>
   <% end %>
+
+
 
 </div>
 

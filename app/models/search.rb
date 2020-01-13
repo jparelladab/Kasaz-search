@@ -1,4 +1,5 @@
 class Search < ApplicationRecord
+
   def search_apartments(search)
     apartments = Apartment.all
     apartments = apartments.where(["LOWER(title) LIKE ?", "%#{search.keywords.downcase}%"]) if keywords.present?

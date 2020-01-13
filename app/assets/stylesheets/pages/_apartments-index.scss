@@ -96,45 +96,7 @@ $purple: #7225A1;
     }
   }
   .bedroom-filters {
-    // margin: 0 auto;
-    // margin-left: 10px;
-    // margin-bottom: 40px;
-    // border: 1px solid black;
-    // border-radius: 3px;
-    width: 330px;
-    box-sizing: border-box;
-.bedroom-filter-cell {
-    //   border: 1px solid black;
-    //   text-align: center;
-    //   display:inline-block;
-    // margin-right: -5px;
-    // padding-left: 0;
-    // text-align: center;
-    border: 1px solid #b9b9b9;
-    display: inline-block;
-    margin-right: -5px;
-    padding-left: 0;
-    text-align: center;
-    position: relative;
-    min-height: 1.5rem;
-
-
-      .bedroom-filter-input {
-        // opacity: 0;
-        box-sizing: border-box;
-    padding: 0;
-    position: absolute;
-    z-index: -1;
-      }
-      .bedroom-filter-label {
-        cursor: pointer;
-    margin-bottom: 0;
-    padding: 10px;
-    width: 100%;
-    display: inline-block
-
-      }
-    }
+    padding: 0 10%;
   }
 
 .apartments-container {
@@ -172,5 +134,9 @@ $purple: #7225A1;
 
 
 
+}
+
+.align-dropdowns {
+  text-align: center;
 }
 

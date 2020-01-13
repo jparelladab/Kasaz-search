@@ -1,7 +1,6 @@
 <div class="card-apartment">
   <div class="card-image">
-    <%= image_tag("barcelona-apartment.jpg", :alt => "Kasaz logo") %>
-  <!-- <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1346&q=80" alt="Spacious room in the city center"> -->
+    <%= image_tag apartment.photo_link %>
     <div class="price-banner">
       <h4><%= number_with_delimiter(apartment.price, delimiter:  '.')%> &euro;</h4>
       <h5><%= number_with_delimiter(apartment.price/apartment.sqm, delimiter: '.')%> &euro;/m<sup>2</sup></h5>
