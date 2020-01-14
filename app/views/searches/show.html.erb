@@ -1,49 +1,50 @@
 <script>
   $(document).ready(function(){
+    $("#search-button-invalidated").click(function(){
+      $("#new_search").submit();
+    });
     $(".filtros-button").click(function(){
       $("#myForm").slideToggle();
       $('#caret-toggle').toggleClass('fa-angle-up fa-angle-down');
-    });
-    $(".search_keywords").keyup(function(){
-      $('#hiddenText').val($('#search_keywords').val());
     });
     $('#hiddenText').val($('#search_keywords').val());
   });
 </script>
 
-<% if @search.keywords.empty? && @search.search_apartments(@search).empty?%>
-  <div class="navbar-index">
-    <i class="fas fa-bars"></i>
-    <%= image_tag("_logo.png", class: "navbar-image") %>
-  </div>
-  <div class="search-bar-index">
-  <%= simple_form_for @new_search, html: {class: "form-inline"} do |s| %>
-    <%= s.input :keywords, label: false, input_html: { value: @search.keywords } %>
-    <%= button_tag do %><i class='fa fa-search'></i><% end %>
-  <% end %>
-    <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
-  </div>
-    <div id="myForm">
-      <%= render "apartments/apartments-filter" %>
-    </div>
-  <div>No results for given parameters</div>
 
-<% elsif @search.keywords.present? && @search.search_apartments(@search).empty? %>
+<% if @search.keywords.present? && @apartments.empty?%>
   <div class="navbar-index">
     <i class="fas fa-bars"></i>
     <%= image_tag("_logo.png", class: "navbar-image") %>
   </div>
   <div class="search-bar-index">
-  <%= simple_form_for @new_search, html: {class: "form-inline"} do |s| %>
-    <%= s.input :keywords, label: false, input_html: { value: @search.keywords } %>
-    <%= button_tag do %><i class='fa fa-search'></i><% end %>
-  <% end %>
+  <div class="fake-form">
+    <input type="text" placeholder="Search.." >
+    <button id="search-button-invalidated"><i class="fa fa-search"></i></button>
+  </div>
     <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
   </div>
     <div id="myForm">
-      <%= render "apartments/apartments-filter" %>
+      <%= render "show-apartments-filter" %>
     </div>
-  <p>No results for given keywords or parameters</p>
+  <div>No results for given keywords or parameters</div>
+
+<% elsif !@search.keywords.present? && @apartments.empty? %>
+  <div class="navbar-index">
+    <i class="fas fa-bars"></i>
+    <%= image_tag("_logo.png", class: "navbar-image") %>
+  </div>
+  <div class="search-bar-index">
+  <div class="fake-form">
+    <input type="text" placeholder="Search.." >
+    <button id="search-button-invalidated"><i class="fa fa-search"></i></button>
+  </div>
+    <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
+  </div>
+    <div id="myForm">
+      <%= render "show-apartments-filter" %>
+    </div>
+  <p>No results for given parameters</p>
 
 <% else %>
   <div class="navbar-index">
@@ -51,17 +52,17 @@
     <%= image_tag("_logo.png", class: "navbar-image") %>
   </div>
   <div class="search-bar-index">
-   <%= simple_form_for @new_search, html: {class: "form-inline"} do |s| %>
-    <%= s.input :keywords, label: false, input_html: { value: @search.keywords } %>
-  <%= button_tag do %><i class='fa fa-search'></i><% end %>
-<% end %>
+   <div class="fake-form">
+    <input type="text" placeholder="Search.." >
+    <button id="search-button-invalidated"><i class="fa fa-search"></i></button>
+  </div>
     <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
   </div>
     <div id="myForm">
-      <%= render "apartments/apartments-filter", search: @new_search %>
+      <%= render "show-apartments-filter", search: @new_search %>
     </div>
     <div class="apartments-container">
-      <% @search.search_apartments(@search).each do |apartment| %>
+      <% @apartments.each do |apartment| %>
         <%= render "apartments/apartment-card", apartment: apartment %>
       <% end %>
     </div>

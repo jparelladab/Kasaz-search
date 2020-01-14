@@ -1,5 +1,9 @@
 <script>
   $(document).ready(function(){
+    $("#search-button-invalidated").click(function(){
+      console.log("hello");
+      $("#new_search").submit();
+    });
     $(".filtros-button").click(function(){
       $("#myForm").slideToggle();
       $('#caret-toggle').toggleClass('fa-angle-up fa-angle-down');
@@ -15,10 +19,11 @@
 
 <div class="search-bar-index">
 
-<%= simple_form_for @new_search, html: {class: "form-inline"} do |s| %>
-  <%= s.input :keywords, label: false %>
-  <%= button_tag do %><i class='fa fa-search'></i><% end %>
-<% end %>
+<div class="fake-form">
+  <input type="text" placeholder="Search.." id="search_keywords">
+  <button id="search-button-invalidated"><i class="fa fa-search"></i></button>
+</div>
+
 
 
   <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
