@@ -1,0 +1,39 @@
+"Piso en el centro de l'Eixample":
+  address: "Carrer d'Aragó 234 08007 Barcelona"
+  price: 500000
+  sqm: 200
+  number_of_bedrooms: 3
+  number_of_bathrooms: 2
+  photo_link: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+
+"Piso en el centro de Horta":
+  address: "Carrer de Dante Alighieri 43 08032 Barcelona"
+  price: 300000
+  sqm: 150
+  number_of_bedrooms: 3
+  number_of_bathrooms: 2
+  photo_link: "https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+
+"Piso en el centro de Gracia":
+  address: "Carrer Verdi 45, Barcelona"
+  price: 400000
+  sqm: 200
+  number_of_bedrooms: 2
+  number_of_bathrooms: 2
+  photo_link: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1346&q=80"
+
+"Piso en el centro de Sants":
+  address: "carrer de Galileu 15, 08028 Barcelona "
+  price: 200000
+  sqm: 200
+  number_of_bedrooms: 1
+  number_of_bathrooms: 1
+  photo_link: "https://images.unsplash.com/photo-1527030280862-64139fba04ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1212&q=80"
+
+"Piso en el centro de Poblenou":
+  address: "carrer Almogavers 23, Barcelona"
+  price: 600000
+  sqm: 200
+  number_of_bedrooms: 4
+  number_of_bathrooms: 3
+  photo_link: "https://images.unsplash.com/photo-1515263487990-61b07816b324?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"

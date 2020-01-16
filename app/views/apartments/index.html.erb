@@ -4,7 +4,7 @@
       $('#hiddenText').val($('#search_keywords').val());
       $("#new_search").submit();
     });
-    $(".filtros-button").click(function(){
+    $("#filtros-button").click(function(){
       $("#myForm").slideToggle();
       $('#caret-toggle').toggleClass('fa-angle-up fa-angle-down');
     });
@@ -23,9 +23,7 @@
   <button id="search-button-invalidated"><i class="fa fa-search"></i></button>
 </div>
 
-
-
-  <button class="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
+<button id="filtros-button">Filtros <i id="caret-toggle" class="fas fa-angle-up"></i></button>
 </div>
 
   <div id="myForm">
@@ -41,7 +39,6 @@
             <%= s.input :min_price, label: false, collection: {'Min' => 0,'60,000 €' => 60000, "80,000 €" => 80000, "90,000 €" => 90000, '100,000 €' => 100000, '110,000 €' => 110000, '120,000 €' => 120000}, selected: @search.min_price %>
             <%= s.input :max_price, label: false, collection: {'Max' => 0,'60,000 €' => 60000, "80,000 €" => 80000, "90,000 €" => 90000, '100,000 €' => 100000, '110,000 €' => 110000, '120,000 €' => 120000}, selected: @search.max_price %>
           <% end %>
-
         </div>
 
         <h4>Tamaño</h4>
